@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 $title='Register'; require 'includes/header.php'; ?>
+<div class="auth"><aside class="auth-side"><div class="big">&#128295;</div><h2>Join AutoCare</h2><p>Create a free account and book your first service in under a minute.</p><ul><li>&#10003; Transparent pricing</li><li>&#10003; No phone calls</li><li>&#10003; Secure and private</li></ul></aside>
 <div class="card formbox"><h2 style="margin-top:0">Create your account</h2>
 <?php foreach ($errors as $er) echo "<div class='alert error'>".e($er)."</div>"; ?>
 <form method="post"><?= csrf_field() ?>
@@ -28,5 +29,5 @@ $title='Register'; require 'includes/header.php'; ?>
 <div><label>Phone (10 digits)</label><input name="phone" maxlength="10" pattern="[0-9]{10}" value="<?= e($_POST['phone'] ?? '') ?>" required></div></div>
 <div class="row2"><div><label>Password</label><input type="password" name="password" minlength="6" required></div>
 <div><label>Confirm Password</label><input type="password" name="password2" required></div></div>
-<button>Register</button> <span class="mut">Already a member? <a href="login.php">Login</a></span></form></div>
+<button>Register</button> <span class="mut">Already a member? <a href="login.php">Login</a></span></form></div></div>
 <?php require 'includes/footer.php'; ?>

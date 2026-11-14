@@ -4,7 +4,10 @@ session_start();
 function db(): PDO {
     static $pdo = null;
     if ($pdo) return $pdo;
-    $path = __DIR__ . '/../data/vsbs.sqlite';
+    $dir = __DIR__ . '/../data';
+    if (!is_dir($dir)) @mkdir($dir, 0777, true);   // GitHub does not keep empty folders, so create it here
+    @chmod($dir, 0777);
+    $path = $dir . '/vsbs.sqlite';
     $new = !file_exists($path);
     $pdo = new PDO('sqlite:' . $path);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -36,6 +39,19 @@ function seed(PDO $pdo): void {
     ];
     $st = $pdo->prepare("INSERT INTO services(name,description,price,duration_hrs) VALUES(?,?,?,?)");
     foreach ($svc as $s) $st->execute($s);
+    // demo customer with sample bookings so the site never looks empty
+    $pdo->prepare("INSERT INTO users(name,email,phone,password,role) VALUES(?,?,?,?,?)")
+        ->execute(['Demo Customer','demo@vsbs.com','9876500000',password_hash('demo123',PASSWORD_DEFAULT),'customer']);
+    $b = $pdo->prepare("INSERT INTO bookings(user_id,service_id,vehicle_type,vehicle_model,reg_no,booking_date,time_slot,notes,status) VALUES(2,?,?,?,?,?,?,?,?)");
+    $b->execute([1,'Car','Maruti Swift VXi','DL 01 AB 1234',date('Y-m-d',strtotime('-6 days')),'10:00 AM','Regular service','Completed']);
+    $b->execute([3,'SUV','Hyundai Creta SX','DL 8C AX 4521',date('Y-m-d',strtotime('+2 days')),'11:00 AM','Brake noise','Confirmed']);
+    $b->execute([5,'Car','Honda City ZX','HR 26 DK 9087',date('Y-m-d',strtotime('+4 days')),'03:00 PM','','Pending']);
+}
+function svc_icon(string $n): string {
+    $map = ['general'=>'&#128295;','oil'=>'&#128738;&#65039;','brake'=>'&#128721;','wheel'=>'&#128735;','ac '=>'&#10052;&#65039;','ac s'=>'&#10052;&#65039;','battery'=>'&#128267;','wash'=>'&#128703;','diagnos'=>'&#129658;'];
+    $n = strtolower($n);
+    foreach ($map as $k => $v) if (str_contains($n, $k)) return $v;
+    return '&#9881;&#65039;';
 }
 function e($s): string { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 function flash(?string $msg = null, string $type = 'success') {

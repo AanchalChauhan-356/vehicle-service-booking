@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 $sel = (int)($_POST['service_id'] ?? $_GET['service'] ?? 0);
 $title='Book Service'; require 'includes/header.php'; ?>
-<div class="card formbox wide"><h2 style="margin-top:0">Book a Service</h2>
+<div class="bookgrid"><div class="card"><h2 style="margin-top:0">Book a Service</h2>
 <?php foreach ($errors as $er) echo "<div class='alert error'>".e($er)."</div>"; ?>
 <form method="post" id="bf"><?= csrf_field() ?>
 <label>Select Service</label>
@@ -50,6 +50,8 @@ $title='Book Service'; require 'includes/header.php'; ?>
 <label>Additional Notes (optional)</label><textarea name="notes" rows="3" placeholder="Any specific problem, e.g. strange noise from front wheel"><?= e($_POST['notes'] ?? '') ?></textarea>
 <div class="summary" id="sum">Select a service to see the estimated cost and duration.</div>
 <button>Confirm Booking</button></form></div>
+<aside class="card side"><h3>&#128221; Before you book</h3><ul><li>Workshop open <b>Mon - Sat, 9 AM - 6 PM</b></li><li>Max <b>2 vehicles</b> per time slot</li><li>Prices are estimates; pay at the workshop</li><li>Cancel anytime from <b>My Bookings</b></li></ul>
+<div class="summary">&#128161; Tip: mention any noise or warning light in the notes so our mechanics can prepare.</div></aside></div>
 <script>
 const s=document.getElementById('svc'),o=document.getElementById('sum');
 function up(){const x=s.options[s.selectedIndex];o.innerHTML=x&&x.dataset.p?'Estimated cost: <b>&#8377;'+Number(x.dataset.p).toLocaleString('en-IN')+'</b> &middot; Approx. duration: <b>'+x.dataset.d+' hr(s)</b>':'Select a service to see the estimated cost and duration.';}

@@ -1,20 +1,17 @@
 # AutoCare - Vehicle Service Booking System
+PHP forms + SQLite. Customers book vehicle services; admin manages bookings.
 
-PHP forms + SQLite web app. Customers book vehicle services; admin manages bookings.
+**Demo logins:** admin `admin@vsbs.com` / `admin123`  |  customer `demo@vsbs.com` / `demo123`
 
-## Run it with only a GitHub login (no installation)
-1. Open this repository on github.com.
-2. Click the green **Code** button -> **Codespaces** tab -> **Create codespace on main**.
-3. Wait ~1 minute. The website opens automatically in a new browser tab.
-   If it does not: open the **Ports** tab at the bottom of the editor and click the globe icon next to port **8000**.
+## Run in GitHub Codespaces
+```
+cd VehicleServiceBooking      # only if your files are inside this folder
+php -S 0.0.0.0:8000
+```
+Open the Ports tab -> globe icon beside port 8000.
 
-**Admin login:** `admin@vsbs.com` / `admin123`  (customers: use Register)
-
-If the site is not running (Codespaces sleep after 30 min idle), open the Terminal and run:
-`php -S 0.0.0.0:8000 -t .`  then open port 8000 from the Ports tab.
-
-## Run on your own PC
-Install/extract PHP 8.1+ (with pdo_sqlite), then run `php -S localhost:8000` in this folder, or double-click `start.bat` on Windows.
-
-## Structure
-`index.php, services.php` public | `register.php, login.php` auth | `book.php, my_bookings.php` customer | `admin/` admin | `includes/` db + layout | `assets/` CSS | `data/` SQLite DB (auto-created)
+## Deploy on Render (free, GitHub login)
+1. render.com -> Sign in with GitHub -> New -> Web Service -> pick this repo.
+2. Language/Runtime: Docker. Root Directory: the folder that contains the Dockerfile (VehicleServiceBooking if your files are in that folder, otherwise blank).
+3. Instance type: Free -> Create Web Service. Wait ~3-5 minutes; open the onrender.com link.
+Note: on the free plan the SQLite database resets when the service sleeps/redeploys (demo data is re-created automatically).
