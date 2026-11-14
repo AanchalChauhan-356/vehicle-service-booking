@@ -27,15 +27,15 @@ Most small workshops still take service appointments over phone calls and paper 
 
 | Home | Services |
 |---|---|
-| ![Home](screenshots/home.png) | ![Services](screenshots/services.png) |
+| ![Home]("C:\Users\yashika chauhan\Downloads\README_with_screenshots\screenshots\home.png") | ![Services]("C:\Users\yashika chauhan\Downloads\README_with_screenshots\screenshots\services.png") |
 
 | Book a Service | My Bookings |
 |---|---|
-| ![Book](screenshots/book.png) | ![My Bookings](screenshots/my_bookings.png) |
+| ![Book]("C:\Users\yashika chauhan\Downloads\README_with_screenshots\screenshots\book.png") | ![My Bookings]("C:\Users\yashika chauhan\Downloads\README_with_screenshots\screenshots\my_bookings.png") |
 
 | Login | Admin Dashboard |
 |---|---|
-| ![Login](screenshots/login.png) | ![Admin](screenshots/admin_dashboard.png) |
+| ![Login]("C:\Users\yashika chauhan\Downloads\README_with_screenshots\screenshots\login.png") | ![Admin]("C:\Users\yashika chauhan\Downloads\README_with_screenshots\screenshots\admin_dashboard.png") |
 
 ## Features
 
