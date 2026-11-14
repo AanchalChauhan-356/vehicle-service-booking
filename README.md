@@ -27,9 +27,8 @@ Most small workshops still take service appointments over phone calls and paper 
 
 | Home | Services |
 |---|---|
-|<img width="100" height="117" alt="home" src="https://github.com/user-attachments/assets/d352b6f6-daac-439b-ae6f-76bff3687f71" />
-|<img width="100" height="70" alt="services" src="https://github.com/user-attachments/assets/c1c2024e-c54b-43db-8d5d-137a8b393b2c" />
-|
+<img width="100" height="117" alt="home" src="https://github.com/user-attachments/assets/d352b6f6-daac-439b-ae6f-76bff3687f71" /><img width="100" height="70" alt="services" src="https://github.com/user-attachments/assets/c1c2024e-c54b-43db-8d5d-137a8b393b2c" />
+
 
 | Book a Service | My Bookings |
 |---|---|
