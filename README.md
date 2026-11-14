@@ -27,21 +27,21 @@ Most small workshops still take service appointments over phone calls and paper 
 
 | Home | Services |
 |---|---|
-| <img width="1000" height="1171" alt="home" src="https://github.com/user-attachments/assets/d352b6f6-daac-439b-ae6f-76bff3687f71" />
- | <img width="1000" height="703" alt="services" src="https://github.com/user-attachments/assets/c1c2024e-c54b-43db-8d5d-137a8b393b2c" />
- |
+|<img width="1000" height="1171" alt="home" src="https://github.com/user-attachments/assets/d352b6f6-daac-439b-ae6f-76bff3687f71" />
+|<img width="1000" height="703" alt="services" src="https://github.com/user-attachments/assets/c1c2024e-c54b-43db-8d5d-137a8b393b2c" />
+|
 
 | Book a Service | My Bookings |
 |---|---|
-| <img width="1000" height="703" alt="book" src="https://github.com/user-attachments/assets/78044502-a4ed-4961-b3ae-e2f7d6ea3e75" />
- | <img width="1000" height="484" alt="my_bookings" src="https://github.com/user-attachments/assets/ee2bf88a-66ab-4fd6-90fd-21b8918879bb" />
+|<img width="1000" height="703" alt="book" src="https://github.com/user-attachments/assets/78044502-a4ed-4961-b3ae-e2f7d6ea3e75" />
+|<img width="1000" height="484" alt="my_bookings" src="https://github.com/user-attachments/assets/ee2bf88a-66ab-4fd6-90fd-21b8918879bb" />
 |
 
 | Login | Admin Dashboard |
 |---|---|
-| <img width="1000" height="625" alt="login" src="https://github.com/user-attachments/assets/db02764a-1283-4a45-8d5f-cf64d552faba" />
- | (<img width="1000" height="562" alt="admin_dashboard" src="https://github.com/user-attachments/assets/ac715f27-f486-428f-aef0-a5f6db7df52a" />
- |
+|<img width="1000" height="625" alt="login" src="https://github.com/user-attachments/assets/db02764a-1283-4a45-8d5f-cf64d552faba" />
+|<img width="1000" height="562" alt="admin_dashboard" src="https://github.com/user-attachments/assets/ac715f27-f486-428f-aef0-a5f6db7df52a" />
+|
 
 ## Features
 
